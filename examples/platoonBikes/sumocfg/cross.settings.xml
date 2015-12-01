@@ -1,0 +1,10 @@
+<viewsettings>
+    <delay value="100"/>
+    <viewport zoom="300" x="200" y="200"/>
+    <decal centerX="218" centerY="200" width="343" height="240" rotation="0.00"/>
+    <scheme name="cars">
+        <opengl antialiase="0" dither="0"/>
+        <vehicles vehicleMode="3" vehicleQuality="2" minVehicleSize="1.00" vehicleExaggeration="1.00" showBlinker="1"/>
+        <legend showSizeLegend="1"/>
+    </scheme>
+</viewsettings>

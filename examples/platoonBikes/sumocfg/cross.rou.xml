@@ -1,0 +1,18 @@
+<routes>
+    <vTypeDistribution id="DEFAULT_VEHTYPE">
+	<vType id="car" accel="2.5" decel="6.0" sigma="0.5" length="4" minGap="0" maxSpeed="41" color="137,164,204" probability="1" >
+		<carFollowing-CC tau="0.5" omegaN="1" xi="2" c1="0.5" decel="6" lambda="0.5" lanesCount="4" ccAccel="1.5"/>
+	</vType>
+    </vTypeDistribution>
+
+   	<vType id="bike" length="2.5" minGap="0" guiShape="bicycle" maxSpeed="10" probability="1"/> 
+
+    <route id="right" edges="1fi 1si 3o 3fo"/>
+    	<flow id="turn" route="right" begin="0" end="90000" period="5"/>
+    
+    <route id="platoon_route" edges="1fi 1si 2o 2fo"/>
+	<flow id="platoon" route="platoon_route" begin="0" end="90000" period="2"/>
+    
+    <route id="bc3" edges="1_si 2_o"/>
+    	<flow id="bc3" route="bc3" begin="0" end="90000" period="5" type="bike"/>
+</routes>

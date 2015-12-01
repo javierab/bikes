@@ -1,0 +1,12 @@
+<configuration>
+	<route-files value="cross.rou.xml"/>
+    	<net-file value="cross.net.xml"/>    
+		<gui-settings-file value="cross.settings.xml"/>
+		
+    	<time>
+        	<begin value="0"/>
+        	<end value="81600"/>
+        	<step-length value="0.01"/>
+    	</time>
+
+</configuration>
