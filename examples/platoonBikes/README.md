@@ -1,1 +1,1 @@
-# platoon_bikes - omnet branch
+example for car leaving platoon and interaction with bicycles
