@@ -1,7 +1,7 @@
 <configuration>
 	<route-files value="cross.rou.xml"/>
     	<net-file value="cross.net.xml"/>    
-		<gui-settings-file value="cross.settings.xml"/>
+	<gui-settings-file value="cross.settings.xml"/>
 		
     	<time>
         	<begin value="0"/>

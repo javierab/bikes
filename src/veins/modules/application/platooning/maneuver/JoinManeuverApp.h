@@ -20,7 +20,7 @@
 
 #include "veins/modules/application/platooning/messages/ManeuverMessage_m.h"
 
-class BikesApp : public BaseApp
+class JoinManeuverApp : public BaseApp
 {
 
 	protected:
@@ -70,7 +70,7 @@ class BikesApp : public BaseApp
 		};
 
 		//the state machine handler
-		cFSM leaderFsm, joinerFsm, leaverFsm, followerFsm, bikeFsm;
+		cFSM leaderFsm, joinerFsm, followerFsm;
 		//the role of this vehicle
 		JOIN_ROLE role;
 		//the position of this vehicle in the platoon

@@ -40,7 +40,7 @@ TraCIScenarioManagerLaunchd::~TraCIScenarioManagerLaunchd()
 
 void TraCIScenarioManagerLaunchd::initialize(int stage)
 {
-	if (stage != 1) {
+    if (stage != 1) {
 		TraCIScenarioManager::initialize(stage);
 		return;
 	}
@@ -93,7 +93,6 @@ void TraCIScenarioManagerLaunchd::init_traci() {
 	TraCIBuffer buf;
 	buf << std::string("sumo-launchd.launch.xml") << contents;
 	connection->sendMessage(makeTraCICommand(CMD_FILE_SEND, buf));
-
 	TraCIBuffer obuf(connection->receiveMessage());
 	uint8_t cmdLength; obuf >> cmdLength;
 	uint8_t commandResp; obuf >> commandResp; if (commandResp != CMD_FILE_SEND) error("Expected response to command %d, but got one for command %d", CMD_FILE_SEND, commandResp);
@@ -102,7 +101,6 @@ void TraCIScenarioManagerLaunchd::init_traci() {
 	if (result != RTYPE_OK) {
 		EV << "Warning: Received non-OK response from TraCI server to command " << CMD_FILE_SEND << ":" << description.c_str() << std::endl;
 	}
-
 	TraCIScenarioManager::init_traci();
 }
 

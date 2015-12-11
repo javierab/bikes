@@ -24,6 +24,12 @@
 #define _CAR 0
 #define _BIKE 1
 
+#define LD 0
+#define FL 1
+#define LV 2
+#define BK 3
+
+
 class BikesApp : public BaseApp
 {
 
@@ -57,13 +63,13 @@ class BikesApp : public BaseApp
         typedef enum _LEAVER_STATES {
             LVS_INIT = 0,
             LVS_IDLE = FSM_Steady(1), //still in platoon
-            LVS_LEAVE_PLATOON = FSM_Steady(3) //not in the platoon anymore!
+            LVS_LEAVE_PLATOON = FSM_Steady(2) //not in the platoon anymore!
         } LEAVER_STATES;
 
         typedef enum _BIKE_STATES {
             BS_INIT = 0,
-            BS_IDLE = FMS_Steady(1),//normal riding
-            BS_STOP = FSM_Steady(2) //received a signal to stop from a follower vehicle
+            BS_IDLE = FSM_Steady(1), //normal riding
+            BS_STOP = FSM_Steady(2)  //received a signal to stop from a follower vehicle
         } BIKE_STATES;
 
 
@@ -87,10 +93,10 @@ class BikesApp : public BaseApp
 
         //my vehicle type
         int myType;
-		//the state machine handler
+  		//the state machine handler
 		cFSM leaderFsm, followerFsm, leaverFsm, bikeFsm;
 		//the role of this vehicle
-		JOIN_ROLE role;
+		ROLES role;
 		//the position of this vehicle in the platoon
 		int position;
 		//data known by the vehicle
@@ -121,14 +127,15 @@ class BikesApp : public BaseApp
         virtual void handleLowerMsg(cMessage *msg);
         virtual void handleLowerControl(cMessage *msg);
 
-        ManeuverMessage *generateMessage();
-
-        void handleLeaderMsg(cMessage *msg);
-        void handleJoinerMsg(cMessage *msg);
-        void handleLeaverMsg(cMessage *msg);
-        void handleFollowerMsg(cMessage *msg);
-        void handleBikeMsg(cMessage *msg);
-
+        void handleMsg(cMessage *msg);
+        BikesMessage *generateMessage();
+//
+//        void handleLeaderMsg(cMessage *msg);
+//        void handleJoinerMsg(cMessage *msg);
+//        void handleLeaverMsg(cMessage *msg);
+//        void handleFollowerMsg(cMessage *msg);
+//        void handleBikeMsg(cMessage *msg);
+//
         void prepareManeuverCars(int platoonLane);
         void receiveMessage(cMessage *msg);
 
