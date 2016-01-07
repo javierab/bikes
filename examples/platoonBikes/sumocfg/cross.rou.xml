@@ -4,10 +4,10 @@
 	</vType>
 
    	<vType id="bike" length="2.5" minGap="0" guiShape="bicycle" maxSpeed="20" probability="1"/> 
-
+<!--
     <route id="right" edges="1fi 1si 3o 3fo"/>
     	<flow id="turn" route="right" begin="0" end="90000" period="3"/>
-    
+-->    
     <route id="route" edges="1fi 1si 2o 2fo"/>
 	<flow id="platoon" route="route" begin="0" end="90000" period="3"/>
 <!--    
