@@ -64,4 +64,5 @@ f.close()
 
 check_call(['env', 'opp_makemake'] + makemake_flags, cwd='src')
 
-print 'Configure done. You can now run "make".'
+print ('Configure done. You can now run "make".')
+
