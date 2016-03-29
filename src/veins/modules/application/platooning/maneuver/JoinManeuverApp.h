@@ -61,7 +61,8 @@ class JoinManeuverApp : public BaseApp
 		enum LEADER_MSGS {
 			LM_MOVE_IN_POSITION = 0,
 			LM_JOIN_PLATOON = 1,
-			LM_UPDATE_FORMATION = 2
+			LM_UPDATE_FORMATION = 2,
+			LM_INCREASE_SPACING = 3
 		};
 		enum JOINER_MSGS {
 			JM_REQUEST_JOIN = 3,

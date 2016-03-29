@@ -14,6 +14,8 @@
 //
 
 #include "veins/modules/application/platooning/maneuver/JoinManeuverApp.h"
+#define NORMAL_SPACING 5
+#define LARGE_SPACING 20
 
 //#include "crng.h"
 //#include "WaveShortMessage_m.h"
@@ -270,6 +272,11 @@ void JoinManeuverApp::handleLeaderMsg(cMessage *msg) {
 				if (maneuver->getMessageType() == JM_IN_PLATOON) {
 					//add the joiner to the list of vehicles in the platoon
 					vehicleData.formation.push_back(vehicleData.joinerId);
+
+					toSend = generateMessage();
+					toSend->setMessageType(LM_INCREASE_SPACING);
+					sendUnicast(toSend, -1);
+
 					toSend = generateMessage();
 					toSend->setMessageType(LM_UPDATE_FORMATION);
 					toSend->setPlatoonFormationArraySize(vehicleData.formation.size());
@@ -428,7 +435,7 @@ void JoinManeuverApp::handleJoinerMsg(cMessage *msg) {
 
 					traciVehicle->setActiveController(Plexe::CACC);
 					//set spacing to 5 meters to get close to the platoon
-					traciVehicle->setCACCConstantSpacing(5);
+					traciVehicle->setCACCConstantSpacing(NORMAL_SPACING);
 				}
 				//tell the leader that we're now in the platoon
 				toSend = generateMessage();
@@ -451,6 +458,10 @@ void JoinManeuverApp::handleJoinerMsg(cMessage *msg) {
 					for (unsigned int i = 0; i < maneuver->getPlatoonFormationArraySize(); i++) {
 						vehicleData.formation.push_back(maneuver->getPlatoonFormation(i));
 					}
+				}
+
+				if (maneuver->getMessageType() == LM_INCREASE_SPACING) { // space yourselves
+					traciVehicle->setCACCConstantSpacing(LARGE_SPACING);
 				}
 			}
 
@@ -498,6 +509,10 @@ void JoinManeuverApp::handleFollowerMsg(cMessage *msg) {
 					for (unsigned int i = 0; i < maneuver->getPlatoonFormationArraySize(); i++) {
 						vehicleData.formation.push_back(maneuver->getPlatoonFormation(i));
 					}
+				}
+
+				if (maneuver->getMessageType() == LM_INCREASE_SPACING) { // space yourselves
+					traciVehicle->setCACCConstantSpacing(LARGE_SPACING);
 				}
 			}
 
