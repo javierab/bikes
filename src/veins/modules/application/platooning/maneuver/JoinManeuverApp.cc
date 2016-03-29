@@ -349,11 +349,11 @@ void JoinManeuverApp::handleJoinerMsg(cMessage *msg) {
 					leaderId = vehicleData.leaderId;
 					frontId = vehicleData.frontId;
 
-					//check for correct lane. if not in correct lane, change it
-					int currentLane = traciVehicle->getLaneIndex();
-					if (currentLane != vehicleData.joinLane) {
-						traciVehicle->setFixedLane(vehicleData.joinLane);
-					}
+					// //check for correct lane. if not in correct lane, change it
+					// int currentLane = traciVehicle->getLaneIndex();
+					// if (currentLane != vehicleData.joinLane) {
+					// 	traciVehicle->setFixedLane(vehicleData.joinLane);
+					// }
 
 					//activate faked CACC. this way we can approach the front car using data obtained through GPS
 					traciVehicle->setCACCConstantSpacing(15);
@@ -418,6 +418,14 @@ void JoinManeuverApp::handleJoinerMsg(cMessage *msg) {
 
 				//if we get confirmation from the leader, switch from faked CACC to real CACC
 				if (maneuver->getMessageType() == LM_JOIN_PLATOON) {
+
+					//check for correct lane. if not in correct lane, change it
+					// changed to change lane at last moment
+					int currentLane = traciVehicle->getLaneIndex();
+					if (currentLane != vehicleData.joinLane) {
+						traciVehicle->setFixedLane(vehicleData.joinLane);
+					}
+
 					traciVehicle->setActiveController(Plexe::CACC);
 					//set spacing to 5 meters to get close to the platoon
 					traciVehicle->setCACCConstantSpacing(5);

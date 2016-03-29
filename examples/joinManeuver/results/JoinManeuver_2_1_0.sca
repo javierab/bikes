@@ -1,0 +1,129 @@
+version 2
+run JoinManeuver-1-20160329-19:05:50-18634
+attr beaconInterval 0.1
+attr caccC1 0.5
+attr caccOmegaN 1
+attr caccXi 2
+attr configname JoinManeuver
+attr datetime 20160329-19:05:50
+attr experiment JoinManeuver
+attr inifile omnetpp.ini
+attr iterationvars "$priority=2, $packetSize=200, $caccC1=0.5, $caccXi=2, $caccOmegaN=1, $beaconInterval=0.1"
+attr iterationvars2 "$priority=2, $packetSize=200, $caccC1=0.5, $caccXi=2, $caccOmegaN=1, $beaconInterval=0.1, $repetition=0"
+attr measurement "$priority=2, $packetSize=200, $caccC1=0.5, $caccXi=2, $caccOmegaN=1, $beaconInterval=0.1"
+attr network scenario
+attr packetSize 200
+attr priority 2
+attr processid 18634
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 1
+attr seedset 0
+
+scalar . 	beaconInterval 	0.1
+scalar . 	caccC1 	0.5
+scalar . 	caccOmegaN 	1
+scalar . 	caccXi 	2
+scalar . 	packetSize 	200
+scalar . 	priority 	2
+scalar scenario.node[4].nic.phy80211p 	busyTime 	0.013122077922078
+scalar scenario.node[4].nic.mac1609_4 	ReceivedUnicastPackets 	0
+scalar scenario.node[4].nic.mac1609_4 	ReceivedBroadcasts 	3609
+scalar scenario.node[4].nic.mac1609_4 	SentPackets 	905
+scalar scenario.node[4].nic.mac1609_4 	SNIRLostPackets 	0
+scalar scenario.node[4].nic.mac1609_4 	RXTXLostPackets 	1
+scalar scenario.node[4].nic.mac1609_4 	TotalLostPackets 	1
+scalar scenario.node[4].nic.mac1609_4 	DroppedPacketsInMac 	0
+scalar scenario.node[4].nic.mac1609_4 	TooLittleTime 	0
+scalar scenario.node[4].nic.mac1609_4 	TimesIntoBackoff 	905
+scalar scenario.node[4].nic.mac1609_4 	SlotsBackoff 	3096
+scalar scenario.node[4].nic.mac1609_4 	NumInternalContention 	0
+scalar scenario.node[4].nic.mac1609_4 	totalBusyTime 	1.478593
+scalar scenario.node[4].mobility 	startTime 	10.01
+scalar scenario.node[4].mobility 	totalTime 	90.08
+scalar scenario.node[4].mobility 	stopTime 	100.1
+scalar scenario.node[4].mobility 	minSpeed 	27.770001525054
+scalar scenario.node[4].mobility 	maxSpeed 	36.215011065451
+scalar scenario.node[4].mobility 	totalDistance 	3047.6141556671
+scalar scenario.node[4].mobility 	totalCO2Emission 	658.64039246899
+scalar scenario.node[0].nic.phy80211p 	busyTime 	0.012593625736838
+scalar scenario.node[0].nic.mac1609_4 	ReceivedUnicastPackets 	0
+scalar scenario.node[0].nic.mac1609_4 	ReceivedBroadcasts 	3847
+scalar scenario.node[0].nic.mac1609_4 	SentPackets 	1001
+scalar scenario.node[0].nic.mac1609_4 	SNIRLostPackets 	0
+scalar scenario.node[0].nic.mac1609_4 	RXTXLostPackets 	1
+scalar scenario.node[0].nic.mac1609_4 	TotalLostPackets 	1
+scalar scenario.node[0].nic.mac1609_4 	DroppedPacketsInMac 	0
+scalar scenario.node[0].nic.mac1609_4 	TooLittleTime 	0
+scalar scenario.node[0].nic.mac1609_4 	TimesIntoBackoff 	1001
+scalar scenario.node[0].nic.mac1609_4 	SlotsBackoff 	3517
+scalar scenario.node[0].nic.mac1609_4 	NumInternalContention 	0
+scalar scenario.node[0].nic.mac1609_4 	totalBusyTime 	1.588241307294
+scalar scenario.node[0].mobility 	startTime 	0.01
+scalar scenario.node[0].mobility 	totalTime 	100.08
+scalar scenario.node[0].mobility 	stopTime 	100.1
+scalar scenario.node[0].mobility 	minSpeed 	23.47188805535
+scalar scenario.node[0].mobility 	maxSpeed 	27.880741123429
+scalar scenario.node[0].mobility 	totalDistance 	2767.634797753
+scalar scenario.node[0].mobility 	totalCO2Emission 	462.13142844668
+scalar scenario.node[1].nic.phy80211p 	busyTime 	0.01270353982301
+scalar scenario.node[1].nic.mac1609_4 	ReceivedUnicastPackets 	0
+scalar scenario.node[1].nic.mac1609_4 	ReceivedBroadcasts 	3860
+scalar scenario.node[1].nic.mac1609_4 	SentPackets 	988
+scalar scenario.node[1].nic.mac1609_4 	SNIRLostPackets 	1
+scalar scenario.node[1].nic.mac1609_4 	RXTXLostPackets 	0
+scalar scenario.node[1].nic.mac1609_4 	TotalLostPackets 	1
+scalar scenario.node[1].nic.mac1609_4 	DroppedPacketsInMac 	0
+scalar scenario.node[1].nic.mac1609_4 	TooLittleTime 	0
+scalar scenario.node[1].nic.mac1609_4 	TimesIntoBackoff 	988
+scalar scenario.node[1].nic.mac1609_4 	SlotsBackoff 	3448
+scalar scenario.node[1].nic.mac1609_4 	NumInternalContention 	0
+scalar scenario.node[1].nic.mac1609_4 	totalBusyTime 	1.588228247637
+scalar scenario.node[1].mobility 	startTime 	0.66
+scalar scenario.node[1].mobility 	totalTime 	99.43
+scalar scenario.node[1].mobility 	stopTime 	100.1
+scalar scenario.node[1].mobility 	minSpeed 	23.3111655466
+scalar scenario.node[1].mobility 	maxSpeed 	30.140510669622
+scalar scenario.node[1].mobility 	totalDistance 	2758.6347407758
+scalar scenario.node[1].mobility 	totalCO2Emission 	466.48821545133
+scalar scenario.node[2].nic.phy80211p 	busyTime 	0.012774752174793
+scalar scenario.node[2].nic.mac1609_4 	ReceivedUnicastPackets 	0
+scalar scenario.node[2].nic.mac1609_4 	ReceivedBroadcasts 	3858
+scalar scenario.node[2].nic.mac1609_4 	SentPackets 	983
+scalar scenario.node[2].nic.mac1609_4 	SNIRLostPackets 	2
+scalar scenario.node[2].nic.mac1609_4 	RXTXLostPackets 	0
+scalar scenario.node[2].nic.mac1609_4 	TotalLostPackets 	2
+scalar scenario.node[2].nic.mac1609_4 	DroppedPacketsInMac 	0
+scalar scenario.node[2].nic.mac1609_4 	TooLittleTime 	0
+scalar scenario.node[2].nic.mac1609_4 	TimesIntoBackoff 	983
+scalar scenario.node[2].nic.mac1609_4 	SlotsBackoff 	3405
+scalar scenario.node[2].nic.mac1609_4 	NumInternalContention 	0
+scalar scenario.node[2].nic.mac1609_4 	totalBusyTime 	1.586255188223
+scalar scenario.node[2].mobility 	startTime 	1.24
+scalar scenario.node[2].mobility 	totalTime 	98.85
+scalar scenario.node[2].mobility 	stopTime 	100.1
+scalar scenario.node[2].mobility 	minSpeed 	23.300493739654
+scalar scenario.node[2].mobility 	maxSpeed 	31.119562247764
+scalar scenario.node[2].mobility 	totalDistance 	2749.6345176593
+scalar scenario.node[2].mobility 	totalCO2Emission 	467.68675553119
+scalar scenario.node[3].nic.phy80211p 	busyTime 	0.012853930753565
+scalar scenario.node[3].nic.mac1609_4 	ReceivedUnicastPackets 	0
+scalar scenario.node[3].nic.mac1609_4 	ReceivedBroadcasts 	3856
+scalar scenario.node[3].nic.mac1609_4 	SentPackets 	972
+scalar scenario.node[3].nic.mac1609_4 	SNIRLostPackets 	2
+scalar scenario.node[3].nic.mac1609_4 	RXTXLostPackets 	0
+scalar scenario.node[3].nic.mac1609_4 	TotalLostPackets 	2
+scalar scenario.node[3].nic.mac1609_4 	DroppedPacketsInMac 	0
+scalar scenario.node[3].nic.mac1609_4 	TooLittleTime 	0
+scalar scenario.node[3].nic.mac1609_4 	TimesIntoBackoff 	972
+scalar scenario.node[3].nic.mac1609_4 	SlotsBackoff 	3447
+scalar scenario.node[3].nic.mac1609_4 	NumInternalContention 	0
+scalar scenario.node[3].nic.mac1609_4 	totalBusyTime 	1.581980129377
+scalar scenario.node[3].mobility 	startTime 	1.9
+scalar scenario.node[3].mobility 	totalTime 	98.19
+scalar scenario.node[3].mobility 	stopTime 	100.1
+scalar scenario.node[3].mobility 	minSpeed 	23.348618371775
+scalar scenario.node[3].mobility 	maxSpeed 	32.023467792864
+scalar scenario.node[3].mobility 	totalDistance 	2740.6340781355
+scalar scenario.node[3].mobility 	totalCO2Emission 	466.95261852499
