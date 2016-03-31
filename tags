@@ -12864,7 +12864,7 @@ curexc_traceback	venv/include/python2.7/pystate.h	/^    PyObject *curexc_traceba
 curexc_type	venv/include/python2.7/pystate.h	/^    PyObject *curexc_type;$/;"	m	struct:_ts
 curexc_value	venv/include/python2.7/pystate.h	/^    PyObject *curexc_value;$/;"	m	struct:_ts
 currency	venv/lib/python2.7/locale.py	/^def currency(val, symbol=True, grouping=False, international=False):$/;"	f
-current	examples/platoonBikes/sumocfg/runner.py	/^	    current = traci.vehicle.getSpeed(vehicleID)$/;"	v
+current	examples/platoonBikes/sumocfg/runner.py	/^            current = traci.vehicle.getSpeed(vehicleID)$/;"	v
 current	src/veins/base/connectionManager/BaseConnectionManager.h	/^		unsigned current;$/;"	m	class:BaseConnectionManager::CoordSet
 currentAcceleration	src/veins/modules/application/platooning/apps/BaseApp.h	/^		double currentSpeed, currentAcceleration, currentControllerAcceleration;$/;"	m	class:BaseApp
 currentAccelerationVec	src/veins/modules/mobility/traci/TraCIMobility.h	/^		cOutVector currentAccelerationVec; \/**< vector plotting acceleration *\/$/;"	m	class:Veins::TraCIMobility
@@ -13517,7 +13517,7 @@ dispatch_hook	venv/lib/python2.7/site-packages/pip/_vendor/requests/hooks.py	/^d
 dispatch_table	venv/lib/python2.7/copy_reg.py	/^dispatch_table = {}$/;"	v
 displayPassed	src/veins/base/utils/asserts.cc	/^bool displayPassed = true;$/;"	v
 display_path	venv/lib/python2.7/site-packages/pip/utils/__init__.py	/^def display_path(path):$/;"	f
-dist	examples/platoonBikes/sumocfg/runner.py	/^	    dist = math.sqrt((veh_x - junc_x)**2 + (veh_y - junc_y)**2)$/;"	v
+dist	examples/platoonBikes/sumocfg/runner.py	/^            dist = math.sqrt((veh_x - junc_x)**2 + (veh_y - junc_y)**2)$/;"	v
 dist	src/veins/base/connectionManager/BaseConnectionManager.cc	/^    static double dist(double coord1, double coord2, double size) {$/;"	f	namespace:__anon192
 dist	src/veins/base/utils/Coord.cc	/^static double dist(double coord1, double coord2, double size) {$/;"	f	file:
 dist	venv/lib/python2.7/site-packages/pip/_vendor/pkg_resources/__init__.py	/^    def dist(self):$/;"	m	class:VersionConflict
@@ -17239,7 +17239,7 @@ max_prefixlen	venv/lib/python2.7/site-packages/pip/_vendor/ipaddress.py	/^    de
 max_prefixlen	venv/lib/python2.7/site-packages/pip/_vendor/ipaddress.py	/^    def max_prefixlen(self):$/;"	m	class:_BaseV6
 max_unicode	venv/lib/python2.7/site-packages/pip/_vendor/html5lib/ihatexml.py	/^max_unicode = int("FFFF", 16)$/;"	v
 maximum	venv/lib/python2.7/site-packages/pip/_vendor/distlib/util.py	/^    def maximum(self):$/;"	m	class:Progress
-maxstep	examples/platoonBikes/sumocfg/runner.py	/^maxstep=100$/;"	v
+maxstep	examples/platoonBikes/sumocfg/runner.py	/^maxstep=10000$/;"	v
 maybe_move	venv/lib/python2.7/site-packages/setuptools/command/easy_install.py	/^    def maybe_move(self, spec, dist_filename, setup_base):$/;"	m	class:easy_install
 mcs_var	src/veins/modules/messages/PhyControlMessage_m.h	/^    int mcs_var;$/;"	m	class:PhyControlMessage
 md5_utf8	venv/lib/python2.7/site-packages/pip/_vendor/requests/auth.py	/^            def md5_utf8(x):$/;"	f	function:HTTPDigestAuth.build_digest_header

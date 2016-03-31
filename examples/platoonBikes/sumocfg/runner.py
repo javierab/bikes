@@ -53,7 +53,7 @@ traci.simulation.subscribe((traci.constants.VAR_LOADED_VEHICLES_IDS, traci.const
 signal(SIGPIPE,SIG_DFL)
 
 #valores fijos para el escenario!
-maxstep=100
+maxstep=10000
 junction_id = "cluster_0__0_0__2_0__4_0__6"
 desacel_dist = 40.0
 
@@ -76,6 +76,7 @@ else:
 
 while step < maxstep:
     step += 1
+    print('step %d' % step)
     traci.simulationStep()
     moveNodes = []
     for veh, subs in traci.vehicle.getSubscriptionResults().iteritems():
@@ -98,9 +99,9 @@ while step < maxstep:
             #print "turn: ", vehicleID
 
             #calculo distancia
-	    veh_x, veh_y = traci.vehicle.getPosition(vehicleID)
-	    dist = math.sqrt((veh_x - junc_x)**2 + (veh_y - junc_y)**2)
-	    current = traci.vehicle.getSpeed(vehicleID)
+            veh_x, veh_y = traci.vehicle.getPosition(vehicleID)
+            dist = math.sqrt((veh_x - junc_x)**2 + (veh_y - junc_y)**2)
+            current = traci.vehicle.getSpeed(vehicleID)
 
             #vemos si me estoy acercando o alejando
             if last_dist[vehicleID] < dist:
