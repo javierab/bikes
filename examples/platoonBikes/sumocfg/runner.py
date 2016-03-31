@@ -3,7 +3,17 @@
 """
 Prueba de ruteo y detencion
 """
-import os, sys, subprocess
+import os
+import sys
+import subprocess
+
+
+if 'SUMO_HOME' in os.environ:
+    tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
+    sys.path.append(tools)
+else:
+    sys.exit("please declare environment variable 'SUMO_HOME'")
+
 import time
 import math
 import traci
@@ -40,7 +50,7 @@ print("started!")
 
 
 traci.simulation.subscribe((traci.constants.VAR_LOADED_VEHICLES_IDS, traci.constants.VAR_DEPARTED_VEHICLES_IDS))
-signal(SIGPIPE,SIG_DFL) 
+signal(SIGPIPE,SIG_DFL)
 
 #valores fijos para el escenario!
 maxstep=100
@@ -76,13 +86,13 @@ while step < maxstep:
         traci.vehicle.subscribe(v)
         subs = traci.vehicle.getSubscriptionResults(v)
         moveNodes.append((v, subs[tc.VAR_ROAD_ID], subs[tc.VAR_LANEPOSITION]))
-    
+
     for vehicleID, edge, pos in moveNodes:
         if vehicleID.startswith("turn"):
 
             #vemos si es primera vez que lo veo y registro su info
             if vehicleID not in last_dist:
-                orig_speed[vehicleID] = traci.vehicle.getSpeed(vehicleID) 
+                orig_speed[vehicleID] = traci.vehicle.getSpeed(vehicleID)
                 last_dist[vehicleID] = 1000000 #big enough
             mode = ""
             #print "turn: ", vehicleID
@@ -105,6 +115,6 @@ while step < maxstep:
             elif dist < 40 and current < orig_speed and mode == "acc":
                 traci.vehicle.setSpeed(vehicleID, current + 1.5)
             #actualizo distancia
-            last_dist[vehicleID] = dist          
+            last_dist[vehicleID] = dist
 
 traci.close()
