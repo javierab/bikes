@@ -3,14 +3,20 @@
 		<carFollowing-CC tau="0.5" omegaN="1" xi="2" c1="0.5" decel="6" lambda="0.5" lanesCount="4" ccAccel="1.5"/>
 	</vType>
 
-   	<vType id="bike" length="2.5" minGap="0" guiShape="bicycle" maxSpeed="20" probability="1"/> 
-<!--
+   	<vType id="bike" length="2.5" minGap="0" guiShape="bicycle" maxSpeed="20" probability="1"/>
+
     <route id="right" edges="1fi 1si 3o 3fo"/>
-    	<flow id="turn" route="right" begin="0" end="90000" period="3"/>
--->    
+    	<flow id="turn1" route="right" begin="0" end="9" period="3"/>
+
+	<route id="left" edges="1fi 1si 4o 4fo"/>
+    	<flow id="turn2" route="left" begin="0" end="9" period="3"/>
+
+	<route id="b_right" edges="1_si 2_o"/>
+
     <route id="route" edges="1fi 1si 2o 2fo"/>
-	<flow id="platoon" route="route" begin="0" end="90000" period="3"/>
-<!--    
+	<flow id="bikes" route="b_right" begin="0" end="27" period="3" type="bike"/>
+	<!-- <flow id="platoon1" route="right" begin="0" end="9" period="6"/> -->
+<!--
     <route id="bc3" edges="1_si 2_o"/>
     	<flow id="bc3" route="bc3" begin="0" end="90000" period="5" type="bike"/>
 -->
